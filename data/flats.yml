@@ -1,0 +1,18 @@
+- city: "Paris"
+  country: "France"
+  host: "Sebastien's home"
+  github_nickname: "ssaunier"
+  description: "Charming room in Montmartre"
+  rating: 5
+- city: "Tokyo"
+  country: "Japan"
+  host: "Boris' home"
+  github_nickname: "Papillard"
+  description: "Small flat in Tokyo"
+  rating: 3
+- city: "London"
+  country: "UK"
+  host: "Romain's home"
+  github_nickname: "MonsieurPaillard"
+  description: "Nice flat in Piccadilly"
+  rating: 4

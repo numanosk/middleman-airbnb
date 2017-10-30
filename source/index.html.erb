@@ -1,15 +1,40 @@
 ---
 title: Le Wagon - Middleman
 ---
+<%= %>
+<% %>
 
-<div id="home">
-  <div class="home-content">
-    <%= image_tag "logo.png", width: "200" %>
-    <p>
-      Middleman is now running!
-    </p>
-    <p class="about">
-      <%= link_to "More about this template", "about.html" %>
-    </p>
+<!-- Banner -->
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://kitt.lewagon.com/placeholder/cities/random);">
+    <h1>Welcome home</h1>
+    <p>Book unique homes and experience a city like a local.</p>
+</div>
+
+<!-- Cards -->
+<div class="container" id="home-flats">
+  <h2 class="text-center">Recent flats</h2>
+  <div class="row">
+
+    <% data.flats.each do |flat| %>
+      <div class="col-xs-12 col-md-4">
+
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://kitt.lewagon.com/placeholder/cities/<%= flat.city.downcase %>);">
+          <div class="card-category"><%= flat.city %>, <%= flat.country %></div>
+          <div class="card-description">
+            <h2><%= flat.host %></h2>
+            <p><%= flat.description %></p>
+          </div>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{flat.github_nickname}", class: "card-user" %>
+          <a class="card-link" href="#" ></a>
+      </div>
+
+      </div>
+    <% end %>
+
   </div>
 </div>
+
+
+
+
+
